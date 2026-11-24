@@ -1,12 +1,12 @@
 # Coursework Portfolio
 
-Selected coursework from my Computer Science + Mathematics degree at Harvey Mudd College. This overview covers the programming and mathematical work behind my application projects: implementing data structures, reasoning about performance, testing edge cases, and analyzing numerical models.
+Here’s some of my coursework from Computer Science + Mathematics at Harvey Mudd College. It covers data structures, performance, testing, and numerical models, which also come up in my application projects.
 
 **Languages and tools:** C++, Python, NumPy, pandas, Matplotlib, Git, Make
 
-## C++ data structures — CS70
+## C++ data structures (CS70)
 
-These projects were completed through pair programming. The first three below were developed with Jamie, and the last two with Noah. The course supplied starter code and specifications; the work was collaborative, not a claim of sole authorship.
+I worked on these projects with a partner: Jamie for the first three and Noah for the last two. We worked from course-provided starter code and specifications.
 
 | Project | Work covered | Technical topics |
 | --- | --- | --- |
@@ -20,12 +20,12 @@ The original histories are preserved in private forks on my account. They retain
 
 ### Design questions I can discuss
 
-- **Lists versus vectors:** Why does an interface that looks similar hide very different memory layouts and access costs? A vector provides contiguous storage and efficient indexed access. A linked structure makes different tradeoffs around traversal and allocation.
-- **Trees versus hash tables:** What operations does the client need? Ordered traversal and average-case membership speed lead to different choices. Tree height and hash collisions can dominate the performance of an otherwise simple interface.
-- **Ownership:** Which object owns an allocation, and what should copying or destroying that object do? Making these rules explicit is essential when implementing containers in C++.
+- **Lists versus vectors:** Similar interfaces can hide different memory layouts and access costs. Vectors store elements together and support fast indexed access. Linked structures have different traversal and allocation costs.
+- **Trees versus hash tables:** The right choice depends on whether the client needs ordered traversal or fast average-case membership checks. Tree height and hash collisions can have a large effect on performance.
+- **Ownership:** C++ containers need clear rules for who owns each allocation and what happens when an object is copied or destroyed.
 - **Testing:** Empty containers, duplicate insertions, iteration boundaries, and copy independence deserve targeted tests. A spell-checking client also exercises how the container behaves outside a small unit test.
 
-## Mathematical machine learning — Math 129
+## Mathematical machine learning (Math 129)
 
 My Math 129 repository includes Python implementations, written assignments, plots, and project reports. The programming work extends course-provided starter files.
 
@@ -39,15 +39,15 @@ My Math 129 repository includes Python implementations, written assignments, plo
 
 ### Modeling questions I can discuss
 
-- **Regularization:** How does changing the penalty alter coefficient size and validation error? Training error alone does not establish whether a model generalizes.
-- **Optimization:** How do the learning rate, data scale, and stopping rule affect convergence? The trajectory matters as well as the final output.
-- **K-means:** Why run more than one initialization? Different starting centers can lead to different local solutions. Empty clusters also need deliberate handling.
+- **Regularization:** Changing the penalty affects coefficient size and validation error. Training error alone doesn’t show how well a model generalizes.
+- **Optimization:** Learning rate, data scale, and stopping rules affect convergence. The path to a result matters too.
+- **K-means:** Different starting centers can lead to different local solutions, so it helps to try several initializations. The implementation also needs to handle empty clusters.
 - **Choosing k:** Within-cluster squared error usually decreases as the number of clusters grows. Choosing the smallest raw error across k is not enough; an elbow analysis or another selection criterion is needed.
 
 The Math 129 source remains in the course organization, where personal forking is disabled. This public overview does not redistribute its starter code, assignment solutions, or datasets.
 
 ## Attribution and scope
 
-This repository is a public guide to my coursework, not a public release of the course solutions. It contains newly written summaries and discussion notes. Source history remains intact in the original repositories and private archives. No performance, accuracy, or test-pass claims are made without a corresponding reproducible result.
+I wrote these summaries and discussion notes to give people a way to browse my coursework while keeping course solutions private. The original repositories and private archives keep the source history. Any claims about speed, accuracy, or passing tests need a reproducible result to back them up.
 
 For application projects with public code and setup instructions, see my [main profile](https://github.com/WCopelandProg).
